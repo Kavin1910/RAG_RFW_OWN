@@ -27,7 +27,7 @@ const Index = () => {
 
   if (isAuthenticated) {
     return (
-      <div className="min-h-screen bg-background">
+      <div className="min-h-screen bg-background flex flex-col">
         <header className="border-b bg-card/50 backdrop-blur-sm sticky top-0 z-50">
           <div className="container mx-auto px-4 py-4 flex items-center justify-between">
             <div className="flex items-center space-x-2">
@@ -63,7 +63,7 @@ const Index = () => {
           </div>
         </header>
 
-        <main className="container mx-auto px-4 py-8">
+        <main className="container mx-auto px-4 py-8 flex-1">
           {currentView === 'chat' ? (
             <ChatInterface userRole={userRole} />
           ) : (
@@ -71,7 +71,7 @@ const Index = () => {
           )}
         </main>
 
-        <footer className="border-t bg-card/50 backdrop-blur-sm mt-16">
+        <footer className="border-t bg-card/50 backdrop-blur-sm">
           <div className="container mx-auto px-4 py-6 text-center">
             <p className="text-muted-foreground">
               Developed by{' '}
