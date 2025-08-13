@@ -93,7 +93,7 @@ const ChatInterface = ({ userRole }: ChatInterfaceProps) => {
   };
 
   return (
-    <div className="flex flex-col h-[calc(100vh-8rem)] max-w-4xl mx-auto">
+    <div className="flex flex-col h-[calc(100vh-12rem)] max-w-4xl mx-auto">
       <Card className="flex-1 flex flex-col">
         <CardHeader>
           <CardTitle className="flex items-center space-x-2">
