@@ -93,9 +93,9 @@ const ChatInterface = ({ userRole }: ChatInterfaceProps) => {
   };
 
   return (
-    <div className="flex flex-col h-[calc(100vh-12rem)] max-w-4xl mx-auto">
-      <Card className="flex-1 flex flex-col">
-        <CardHeader>
+    <div className="flex flex-col h-full max-w-4xl mx-auto">
+      <Card className="flex-1 flex flex-col min-h-0">
+        <CardHeader className="flex-shrink-0">
           <CardTitle className="flex items-center space-x-2">
             <Bot className="h-6 w-6 text-primary" />
             <span>Sales AI Assistant</span>
@@ -113,9 +113,9 @@ const ChatInterface = ({ userRole }: ChatInterfaceProps) => {
           </CardTitle>
         </CardHeader>
         
-        <CardContent className="flex-1 flex flex-col space-y-4">
+        <CardContent className="flex-1 flex flex-col space-y-4 min-h-0 overflow-hidden">
           {/* Role Access Info */}
-          <div className="bg-muted/50 p-3 rounded-lg text-sm">
+          <div className="bg-muted/50 p-3 rounded-lg text-sm flex-shrink-0">
             <div className="flex items-center space-x-2">
               <AlertCircle className="h-4 w-4 text-muted-foreground" />
               <span className="font-medium">Access Level:</span>
@@ -128,7 +128,7 @@ const ChatInterface = ({ userRole }: ChatInterfaceProps) => {
           </div>
 
           {/* Predefined Queries */}
-          <div className="flex flex-wrap gap-2">
+          <div className="flex flex-wrap gap-2 flex-shrink-0">
             {predefinedQueries.map((query, index) => (
               <Button
                 key={index}
@@ -144,7 +144,7 @@ const ChatInterface = ({ userRole }: ChatInterfaceProps) => {
           </div>
 
           {/* Messages */}
-          <ScrollArea className="flex-1 pr-4">
+          <ScrollArea className="flex-1 min-h-0 pr-4">
             <div className="space-y-4">
               {messages.map((message) => (
                 <div key={message.id} className="space-y-3">
@@ -247,7 +247,7 @@ const ChatInterface = ({ userRole }: ChatInterfaceProps) => {
           </ScrollArea>
 
           {/* Input */}
-          <div className="flex space-x-2">
+          <div className="flex space-x-2 flex-shrink-0">
             <Input
               value={input}
               onChange={(e) => setInput(e.target.value)}
