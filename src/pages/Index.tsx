@@ -63,7 +63,7 @@ const Index = () => {
           </div>
         </header>
 
-        <main className="container mx-auto px-4 py-8 flex-1">
+        <main className="container mx-auto px-4 py-8 flex-1 overflow-hidden">
           {currentView === 'chat' ? (
             <ChatInterface userRole={userRole} />
           ) : (
@@ -71,7 +71,7 @@ const Index = () => {
           )}
         </main>
 
-        <footer className="border-t bg-card/50 backdrop-blur-sm">
+        <footer className="border-t bg-card/50 backdrop-blur-sm mt-auto">
           <div className="container mx-auto px-4 py-6 text-center">
             <p className="text-muted-foreground">
               Developed by{' '}
